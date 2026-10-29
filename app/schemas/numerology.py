@@ -1,12 +1,14 @@
 from datetime import date
 from typing import Literal
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 from app.engine.name_numerology import normalize_name
 
 
 class NumerologyRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     dob: date = Field(description="Ngày sinh dương lịch, định dạng YYYY-MM-DD")
     full_name: str | None = Field(
         default=None,

@@ -1,11 +1,13 @@
 from typing import Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 from app.engine.tarot import MAX_CARDS
 
 
 class TarotRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     count: int = Field(default=3, ge=1, le=MAX_CARDS, description="Số lá bài cần rút")
 
 
