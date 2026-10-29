@@ -1,4 +1,5 @@
 from datetime import date
+from typing import Literal
 
 from pydantic import BaseModel, Field, field_validator
 
@@ -47,3 +48,15 @@ class NumerologyResponse(BaseModel):
     target_year: int
     soul_urge: int | None = None
     expression: int | None = None
+
+
+class NumerologyInterpretRequest(NumerologyRequest):
+    topic: Literal["general", "career"] = Field(
+        default="general",
+        description="Chủ đề quan tâm",
+    )
+
+
+class NumerologyInterpretResponse(NumerologyResponse):
+    interpretation: str
+    disclaimer: str

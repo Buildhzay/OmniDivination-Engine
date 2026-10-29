@@ -1,3 +1,5 @@
+from typing import Literal
+
 from pydantic import BaseModel, Field
 
 from app.engine.tarot import MAX_CARDS
@@ -20,3 +22,15 @@ class TarotCardOut(BaseModel):
 class TarotResponse(BaseModel):
     seed: int
     cards: list[TarotCardOut]
+
+
+class TarotInterpretRequest(TarotRequest):
+    topic: Literal["general", "career"] = Field(
+        default="general",
+        description="Chủ đề quan tâm",
+    )
+
+
+class TarotInterpretResponse(TarotResponse):
+    interpretation: str
+    disclaimer: str

@@ -1,0 +1,27 @@
+{
+  "numbers": {
+    "1": ["độc lập", "tiên phong", "tự quyết"],
+    "2": ["hợp tác", "nhạy cảm", "kiên nhẫn"],
+    "3": ["sáng tạo", "biểu đạt", "giao tiếp"],
+    "4": ["kỷ luật", "thực tế", "xây nền tảng"],
+    "5": ["tự do", "thích nghi", "ham trải nghiệm"],
+    "6": ["chăm sóc", "trách nhiệm", "hài hòa"],
+    "7": ["phân tích", "chiêm nghiệm", "tìm hiểu sâu"],
+    "8": ["tham vọng", "tổ chức", "quản lý"],
+    "9": ["nhân văn", "bao dung", "hướng đến cộng đồng"],
+    "11": ["trực giác", "cảm hứng", "nhạy bén tinh thần"],
+    "22": ["biến ý tưởng lớn thành hiện thực", "thực tế", "xây dựng quy mô"],
+    "33": ["phụng sự", "nâng đỡ người khác", "chữa lành"]
+  },
+  "personal_year": {
+    "1": ["khởi đầu mới", "chủ động", "gieo hạt"],
+    "2": ["tích lũy nội lực", "kết nối", "kiên nhẫn"],
+    "3": ["sáng tạo", "giao tiếp", "mở rộng quan hệ"],
+    "4": ["xây nền tảng", "kỷ luật", "làm việc chắc chắn"],
+    "5": ["thay đổi", "linh hoạt", "thử cái mới"],
+    "6": ["gia đình", "trách nhiệm", "chăm sóc các mối quan hệ"],
+    "7": ["nhìn lại bản thân", "học hỏi", "tĩnh lặng"],
+    "8": ["thành quả công việc", "quản lý nguồn lực", "tự tin"],
+    "9": ["khép lại chu kỳ", "buông điều không còn phù hợp", "chuẩn bị bước mới"]
+  }
+}

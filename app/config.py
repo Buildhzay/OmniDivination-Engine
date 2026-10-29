@@ -18,6 +18,6 @@ class Settings:
 def get_settings() -> Settings:
     return Settings(
         gemini_api_key=os.getenv("GEMINI_API_KEY") or None,
-        llm_model=os.getenv("LLM_MODEL", "gemini-3.8-flash"),
+        llm_model=os.getenv("LLM_MODEL", "gemini-3.5-flash"),
         app_env=os.getenv("APP_ENV", "development"),
     )

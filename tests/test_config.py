@@ -66,7 +66,7 @@ def test_timeout_becomes_clear_error_without_leaking_key(monkeypatch):
     import app.ai.client as client
     from google.genai._gaos.lib.compat_errors import APITimeoutError
 
-    def fake_call(settings, prompt):
+    def fake_call(settings, prompt, system_prompt=None):
         raise APITimeoutError(httpx.Request("POST", "https://example.test"))
 
     monkeypatch.setenv("GEMINI_API_KEY", "SECRET-123")
@@ -83,7 +83,7 @@ def test_provider_error_does_not_leak_details(monkeypatch):
     import app.ai.client as client
     from google.genai._gaos.lib.compat_errors import APIError
 
-    def fake_call(settings, prompt):
+    def fake_call(settings, prompt, system_prompt=None):
         raise APIError(
             "internal details SECRET-123",
             httpx.Request("POST", "https://example.test"),
